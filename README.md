@@ -1,339 +1,293 @@
 # EasyGenerator - Course Management Platform
 
-A production-ready full-stack modern authentication, interactive dashboard, and beautiful UI.
+> A modern full-stack application featuring secure authentication, interactive dashboards, and beautiful UI. Built with React, NestJS, TypeScript, and MongoDB.
 
-## 🚀 Features
+**Live Demo**: [Coming Soon] | **Documentation**: Complete guides available below
+
+---
+
+## \ud83d\ude80 Quick Overview
+
+This platform provides a complete authentication system with an interactive dashboard for course management. Features include JWT authentication, password strength validation, responsive design, data visualization with charts, and comprehensive security measures.
+
+**Key Highlights:**
+
+- \ud83d\udd12 Secure JWT authentication with bcrypt
+- \ud83d\udcca Interactive dashboard with Recharts
+- \ud83c\udfa8 Modern split-screen UI with Tailwind CSS
+- \ud83d\udce6 MongoDB database with Mongoose ODM
+- \ud83d\udcdd Swagger/OpenAPI documentation
+- \ud83d\udc33 Docker support for easy deployment
+- \u2705 TypeScript throughout for type safety
+
+## Features
 
 ### Authentication & Security
 
-- **JWT-based authentication** with bcrypt password hashing (10 rounds)
-- **Advanced password strength** indicator (weak/medium/strong)
-- **Comprehensive validation** on client and server side
-- **Protected routes** with authentication guards
-- **Session persistence** with localStorage
-- **Secure token** management
+- JWT authentication with bcrypt password hashing
+- Password strength indicator (weak/medium/strong)
+- Client and server validation
+- Protected routes with guards
+- Session persistence (localStorage/sessionStorage)
+- Remember Me functionality
 
-### User Experience
+### User Interface
 
-- **Modern split-screen** authentication UI with gradients
-- **Interactive dashboard** with course statistics and charts
-- **Real-time validation** feedback on all forms
-- **Toast notifications** for user actions
-- **Responsive design** for all device sizes
-- **Smooth animations** and transitions
-- **Password visibility** toggle with eye icons
-- **Terms & conditions** modal with detailed sections
+- Split-screen authentication UI
+- Interactive dashboard with charts (Recharts)
+- Real-time form validation
+- Toast notifications
+- Responsive design (mobile/tablet/desktop)
+- Smooth animations
 
-### Technical Features
+### Technical
 
-- **React 18** with TypeScript for frontend
-- **NestJS 10** with TypeScript for backend
-- **MongoDB** with Mongoose ODM
-- **Recharts** for data visualization
-- **Swagger/OpenAPI** documentation
-- **Winston logging** with file output
-- **Comprehensive security** headers with Helmet
-- **CORS protection** configured
-- **Full name validation** (3-20 characters)
-- **Organized component** architecture
+- TypeScript throughout
+- MongoDB with Mongoose ODM
+- Swagger/OpenAPI documentation
+- Winston logging
+- Helmet security headers
+- CORS protection
 
-## 📁 Project Structure
-
-```
-├── backend/              # NestJS backend application
-│   ├── src/
-│   │   ├── auth/        # Authentication module (JWT, strategies)
-│   │   ├── users/       # Users module (schemas, services)
-│   │   ├── app.module.ts
-│   │   └── main.ts
-│   ├── .env             # Environment configuration
-│   └── README.md        # Backend documentation
-├── frontend/            # React + Vite frontend application
-│   ├── src/.2 with TypeScript 5.3
-- **Build Tool**: Vite 5.0
-- **Styling**: Tailwind CSS 3.4
-- **Icons**: Lucide React 0.263
-- **Charts**: Recharts 2.5
-- **HTTP Client**: Axios 1.6
-- **Routing**: React Router DOM 6.21 (with v7 future flags)
-- **Notifications**: React Hot Toast
-
-### Backend
-- **Framework**: NestJS 10.3 with TypeScript 5.3
-- **Database**: MongoDB 8.0 with Mongoose ODM
-- **Authentication**: JWT + Passport strategies
-- **Validation**: class-validator + class-transformer
-- **Documentation**: Swagger 7.1
-- **Logging**: Winston 3.11
-- **Security**: Helmet 7.1, CORS, bcrypt 5.1tions workflows
-├── ARCHITECTURE.md      # System architecture documentation
-├── QUICKSTART.md        # Quick start guide
-└── README.md            # This file
-```
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
-- **Framework**: React 18 with TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **HTTP Client**: Axios
-- **Routing**: React Router DOM
+- React 18.2 + TypeScript 5.3
+- Vite 5.0 (build tool)
+- Tailwind CSS 3.4 (styling)
+- React Router DOM 6.21
+- Axios 1.6 (HTTP client)
+- Recharts 2.5 (charts)
+- Lucide React 0.263 (icons)
 
 ### Backend
 
-- **Framework**: NestJS
-- **Database**: MongoDB with Mongoose
-- **Authentication**: JWT + Passport
-- **Validation**: class-validator
-- **Documentation**: Swagger/OpenAPI
-- **Logging**: Winston
-- **Security**: Helmet, CORS, bcrypt
+- NestJS 10.3 + TypeScript 5.3
+- MongoDB 8.0 + Mongoose 8.0
+- Passport JWT 4.0 (authentication)
+- bcrypt 5.1 (password hashing)
+- Winston 3.11 (logging)
+- Swagger 7.1 (API docs)
+- Helmet 7.1 (security)
 
-## 🚦 Getting Started
+## Quick Start
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
+- Node.js v18+
 - MongoDB (local or Atlas)
-- npm or yarn
 
-### Backend Setup
-
-1. Navigate to the backend directory:
+### Installation
 
 ```bash
+# Clone repository
+git clone https://github.com/HebaAli48/AuthentactionTaskEasygenerator.git
+cd easyGenrator
+
+# Backend setup
 cd backend
-```
-
-2. Install dependencies:
-
-```bash
 npm install
+# Create .env file (see below)
+npm run start:dev
+
+# Frontend setup (new terminal)
+cd frontend
+npm install
+# Create .env file (see below)
+npm run dev
 ```
 
-3. Create a `.env` file:
+### Environment Configuration
+
+**Backend `.env`:**
 
 ```env
 PORT=3000
 MONGODB_URI=mongodb://localhost:27017/auth-app
-JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+JWT_SECRET=your-secret-key-change-this
 JWT_EXPIRES_IN=7d
+CORS_ORIGIN=http://localhost:5173
 ```
 
-4. Start the development server:
-
-```bash
-npm run start:dev
-```
-
-The API will be available at `http://localhost:3000`
-API documentation at `http://localhost:3000/api/docs`
-
-### Frontend Setup
-
-1. Navigate to the frontend directory:
-
-```bash
-cd frontend
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Create a `.env` file:
+**Frontend `.env`:**
 
 ```env
 VITE_API_URL=http://localhost:3000
 ```
 
-4. Start the development server:
+### Access
 
-```bash
-npm run dev
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:3000
+- **API Docs**: http://localhost:3000/api/docs
+
+## Project Structure
+
+```
+├── backend/              # NestJS backend
+│   ├── src/
+│   │   ├── auth/        # Authentication (JWT, strategies)
+│   │   ├── users/       # User management
+│   │   └── main.ts
+│   └── .env
+├── frontend/            # React + Vite frontend
+│   ├── src/
+│   │   ├── components/  # Organized components
+│   │   ├── pages/       # SignUp, SignIn, Dashboard
+│   │   ├── contexts/    # Auth context
+│   │   └── services/    # API service
+│   └── .env
+└── docker-compose.yml   # Docker setup
 ```
 
-## 🎯 Application Pages
+## API Endpoints
 
-### Sign Up (`/signup`)
+### Public
 
-- Split-screen design with blue gnew user (email, name, password)
-- `POST /auth/signin` - Sign in user (email, password)
+- `POST /auth/signup` - Register user (email, name, password)
+- `POST /auth/signin` - Login (email, password)
 
-### Protected Endpoints (requires JWT token)
-
-- `GET /users/profile` - Get current user profile
-- `GET /users/me` - Get current user details
-
-### API Documentation
-
-Access interactive Swagger docs at: `http://localhost:3000/api/docs`
-
-### Sign In (`/signin`)
-
-- Split-screen design matching signup
-- Email and password with show/hide toggle
-- **Password hashing**: bcrypt with 10 salt rounds
-- **JWT authentication**: Secure token-based auth with 7-day expiration
-- **Input validation**: Comprehensive DTO validation on server
-- **Client validation**: Real-time validation preventing bad requests
-- **CORS protection**: Configured allowed origins
-- **Security headers**: Helmet middleware for HTTP security
-- **MongoDB protection**: Mongoose query sanitization
-- **XSS prevention**: Input sanitization and escaping
-- **Protected routes**: Authentication guards on frontend and backend
-- **Token storage**: Secure localStorage with automatic injection
-- **Password requirements**: Enforced complexity rulesea chart (course enrollments)
-- Featured courses grid with icons and details
-- Responsive layout for all devices
-- Navigation header with dropdown menu
-
-The application will be available at `http://localhost:5173`
-
-## 📚 API Endpoints
-
-### Public Endpoints
-
-- `POST /auth/signup` - Register a new user
-- `POST /auth/signin` - Sign in a user
-
-### Protected Endpoints
+### Protected (requires JWT)
 
 - `GET /users/profile` - Get current user profile
-- `GET /users/me` - Get current user details
-- `POST /auth/logout` - Logout user (clears session)
 
-## 🔒 Security Features
-
-- Password hashing with bcrypt (10 rounds)
-- JWT token-based authentication
-- HTTP-only cookies for token storage
-- CORS protection
-- Helmet for security headers
-- Input validation and sanitization
-- Rate limiting (can be added)
-- XSS protection
-
-## 🧪 Testing
-
-### BaValidation Rules
+## Validation Rules
 
 ### Sign Up
 
 - **Email**: Valid email format, required
-- **Name**:
-  - Minimum 3 characters
-  - Maximum 20 characters
-  - Required field
+- **Name**: 3-20 characters, required
 - **Password**:
-  - **Weak**: 8+ characters
-  - **Medium**: 10+ characters with 2 special characters
-  - **Strong**: 12+ characters with letters, numbers, and special characters
-  - Required field
-- **Confirm Password**: Must match password field
-- **Terms**: Must agree to terms and conditions
+  - Weak: 8+ characters
+  - Medium: 10+ with 2 special characters
+  - Strong: 12+ with letters, numbers, special characters
+- **Confirm Password**: Must match password
+- **Terms**: Must agree to terms
 
 ### Sign In
 
-- **Email**: Valid email format, r
+- **Email**: Valid email, required
+- **Password**: Required
 
-## 📝 Field Validation Rules
+## Application Pages
 
-### Sign Up
+### Sign Up (`/signup`)
 
-- **Email**: Must be a valid email format
-- **Name**: Minimum 3 characters
-- **Password**:
-  - Minimum 8 characters
-  - At least one letter
-  - At least one number
-  - At least one special character
-    NODE_ENV=development
-    MONGODB_URI=mongodb://localhost:27017/auth-app
-    JWT_SECRET=your-super-secret-jwt-key-change-in-production
-    JWT_EXPIRES_IN=7d
-    CORS_ORIGIN=http://localhost:5173
+- Split-screen design with gradient
+- Real-time password strength indicator
+- Popup info for password requirements
+- Terms & conditions modal (10 sections)
+- Auto-redirect to sign in after successful signup
 
-````
+### Sign In (`/signin`)
 
-### Frontend (.env)
-```env
-VITE_API_URL=http://localhost:3000
-````
+- Split-screen design
+- Remember Me checkbox (localStorage vs sessionStorage)
+- Password visibility toggle
+- Forgot password link
 
-**Important**: Change `JWT_SECRET` to a strong random string in production!T=3000
-MO**[Backend README](./backend/README.md)** - Complete backend API documentation
+### Dashboard (`/dashboard`)
 
-- **[Frontend README](./frontend/README.md)** - Frontend features and setup guide
-- **[Component Structure](./frontend/COMPONENT_STRUCTURE.md)** - Component architecture
-- **[Architecture](./ARCHITECTURE.md)** - System architecture overview
-- **[Quick Start](./QUICKSTART.md)** - Step-by-step setup guide
-- **[API Docs](http://localhost:3000/api/docs)** - Interactive Swagger documentation (when running)
+- Welcome message with user name
+- Statistics cards (students, completion rate, revenue)
+- Enrollment area chart
+- Featured courses grid (6 courses)
+- Responsive navigation (hamburger menu on mobile)
+- Avatar dropdown (profile, settings, logout)
 
-## ✨ Key Features Highlights
+## Security Features
 
-### Dashboard Features
+- **Passwords**: bcrypt hashing (10 rounds)
+- **JWT**: HS256, 7-day expiration
+- **Storage**: localStorage (persistent) or sessionStorage (temporary)
+- **CORS**: Origin whitelist
+- **Headers**: Helmet middleware
+- **Validation**: class-validator (server) + custom (client)
+- **XSS**: Input sanitization
+- **MongoDB**: Mongoose query sanitization
 
-- Interactive area chart with course enrollment data
-- Real-time statistics (students, completion rate, revenue)
-- Featured courses grid with icons and details
-- Fully responsive design
-- Personalized welcome message
+## Testing
 
-### Authentication Features
+**Backend:**
 
-- 🔐 Advanced password strength calculation
+```bash
+cd backend
+npm run test          # Unit tests
+npm run test:e2e      # E2E tests
+npm run test:cov      # Coverage
+```
 
----
+## Documentation
 
-## 🙏 Acknowledgments
+Comprehensive documentation is available:
 
-Built with modern technologies and best practices for a scalable, maintainable application.
+### 📘 [QUICKSTART.md](./QUICKSTART.md)
 
-**Note**: This is a course management platform featuring authentication, dashboard, and modern UI/UX design
+Step-by-step guide to get the application running locally in minutes. Covers:
 
-- Clean component architecture
-- Organized folder structure
-- TypeScript throughout
-- Optimized with Vite
-- Tailwind CSS styling
-- React Router with future flags
-- Recharts integration
-- Lucide React icons
-  NODE_ENV=development
+- Prerequisites and installation
+- Environment configuration
+- Starting MongoDB, backend, and frontend
+- Common troubleshooting issues
 
-````
+### 🏗️ [ARCHITECTURE.md](./ARCHITECTURE.md)
 
-### Frontend (.env)
-```env
-VITE_API_URL=http://localhost:3000
-````
+Detailed system architecture and technical design. Includes:
 
-## 📖 Additional Documentation
+- System architecture diagrams
+- Complete data flow diagrams (Sign Up, Sign In, Dashboard, Protected Routes)
+- Component architecture for both frontend and backend
+- Database schema and API endpoints
+- Security implementation details
+- Error handling and logging strategies
+- Deployment architecture
 
-- Backend API documentation available at `/api/docs` when running
-- Code is fully commented and follows best practices
-- TypeScript for type safety
+### 🐳 [DOCKER.md](./DOCKER.md)
 
-## 🤝 Contributing
+Docker setup for containerized development. Covers:
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
+- Docker Compose configuration
+- Running services in containers
+- Volume management and hot reload
+- Docker commands and troubleshooting
 
-## 📄 License
+### 📝 [CHANGELOG.md](./CHANGELOG.md)
+
+Complete version history and release notes. Documents:
+
+- Features added in each version
+- Breaking changes and migrations
+- Bug fixes and improvements
+- Current version: 1.0.0 (Initial release)
+
+### 📚 Module Documentation
+
+- **[backend/README.md](./backend/README.md)** - Backend API documentation, endpoints, validation rules, and development guide
+- **[frontend/README.md](./frontend/README.md)** - Frontend component structure, features, styling guide, and development workflow
+
+### 🔗 Live Documentation
+
+- **[API Docs](http://localhost:3000/api/docs)** - Interactive Swagger/OpenAPI documentation (available when backend is running)
+
+## Docker Support
+
+```bash
+# Start all services
+docker-compose up
+
+# Stop services
+docker-compose down
+```
+
+## License
 
 MIT License
 
-## 👤 Author
+## Author
 
 Created for easyGenerator technical assessment
 
 ---
+
+**Note**: Change `JWT_SECRET` to a strong random string in production!
