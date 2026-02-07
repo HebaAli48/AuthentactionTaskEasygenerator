@@ -56,7 +56,7 @@ export class AuthService {
 
     // Return user without password
     const userObject = user.toObject();
-    const { password: _, ...userWithoutPassword } = userObject;
+    const { password: _password, ...userWithoutPassword } = userObject;
 
     return {
       user: userWithoutPassword,
@@ -97,7 +97,7 @@ export class AuthService {
 
     // Return user without password
     const userObject = user.toObject();
-    const { password: _, ...userWithoutPassword } = userObject;
+    const { password: _password, ...userWithoutPassword } = userObject;
 
     return {
       user: userWithoutPassword,
