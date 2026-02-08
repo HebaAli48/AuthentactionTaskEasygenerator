@@ -203,24 +203,42 @@ npm run lint
 npm run format
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-src/
-├── auth/
-│   ├── dto/              # Data Transfer Objects
-│   ├── guards/           # Authentication guards
-│   ├── strategies/       # Passport strategies
-│   ├── auth.controller.ts
-│   ├── auth.module.ts
-│   └── auth.service.ts
-├── users/
-│   ├── schemas/          # Mongoose schemas
-│   ├── users.controller.ts
-│   ├── users.module.ts
-│   └── users.service.ts
-├── app.module.ts         # Main application module
-└── main.ts              # Application entry point
+backend/
+├── src/
+│   ├── auth/                     # Authentication module
+│   │   ├── dto/                  # Data Transfer Objects
+│   │   │   ├── signin.dto.ts     # Sign in DTO
+│   │   │   └── signup.dto.ts     # Sign up DTO
+│   │   ├── guards/               # Authentication guards
+│   │   │   └── jwt-auth.guard.ts # JWT guard
+│   │   ├── strategies/           # Passport strategies
+│   │   │   └── jwt.strategy.ts   # JWT strategy
+│   │   ├── auth.controller.ts    # Auth endpoints
+│   │   ├── auth.module.ts        # Auth module
+│   │   └── auth.service.ts       # Auth business logic
+│   ├── users/                    # User management module
+│   │   ├── schemas/              # Mongoose schemas
+│   │   │   └── user.schema.ts    # User model
+│   │   ├── users.controller.ts   # User endpoints
+│   │   ├── users.module.ts       # User module
+│   │   └── users.service.ts      # User business logic
+│   ├── app.module.ts             # Main application module
+│   └── main.ts                   # Application entry point
+├── test/
+│   └── jest-e2e.json             # E2E test config
+├── logs/                         # Winston log files
+│   ├── error.log                 # Error logs
+│   └── combined.log              # Combined logs
+├── package.json                  # Dependencies
+├── nest-cli.json                 # Nest CLI config
+├── tsconfig.json                 # TypeScript config
+├── tsconfig.build.json           # Build TypeScript config
+├── Dockerfile                    # Production Docker
+├── Dockerfile.dev                # Development Docker
+└── README.md                     # This file
 ```
 
 ## Security Features

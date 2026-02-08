@@ -2,9 +2,17 @@
 
 > A modern full-stack application featuring secure authentication, interactive dashboards, and beautiful UI. Built with React, NestJS, TypeScript, and MongoDB.
 
-**Live Demo**: [Coming Soon] | **Documentation**: Complete guides available below
 
 ---
+## ✨ App Screens
+<img width="1919" height="1490" alt="Image" src="https://github.com/user-attachments/assets/4ddc3eeb-9d47-4166-bb9d-18f522707b0c" />
+<img width="1919" height="1215" alt="Image" src="https://github.com/user-attachments/assets/82179a50-18dc-47eb-b5d6-a358296d27b7" />
+<img width="1919" height="2595" alt="Image" src="https://github.com/user-attachments/assets/accd79d3-21bd-4369-95aa-4ed91eeb5039" />
+
+### Password Strength Indicator
+<img width="1919" height="1580" alt="Image" src="https://github.com/user-attachments/assets/f03d9050-f5ad-4c03-8738-287bd762d6da" />
+<img width="1919" height="1602" alt="Image" src="https://github.com/user-attachments/assets/01d8d9ce-4df1-43ef-a9a6-f034583710ef" />
+<img width="1919" height="1580" alt="Image" src="https://github.com/user-attachments/assets/fbb05687-0247-467d-829b-531c9fe8f14e" /> 
 
 ## Quick Overview
 
@@ -122,23 +130,91 @@ VITE_API_URL=http://localhost:3000
 - **Backend API**: http://localhost:3000
 - **API Docs**: http://localhost:3000/api/docs
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-├── backend/              # NestJS backend
+easyGenrator/
+├── backend/                      # NestJS backend
 │   ├── src/
-│   │   ├── auth/        # Authentication (JWT, strategies)
-│   │   ├── users/       # User management
+│   │   ├── auth/                # Authentication module
+│   │   │   ├── auth.controller.ts
+│   │   │   ├── auth.service.ts
+│   │   │   ├── auth.module.ts
+│   │   │   ├── dto/             # Data transfer objects
+│   │   │   │   ├── signin.dto.ts
+│   │   │   │   └── signup.dto.ts
+│   │   │   ├── guards/          # Route guards
+│   │   │   │   └── jwt-auth.guard.ts
+│   │   │   └── strategies/      # Passport strategies
+│   │   │       └── jwt.strategy.ts
+│   │   ├── users/               # User management module
+│   │   │   ├── users.controller.ts
+│   │   │   ├── users.service.ts
+│   │   │   ├── users.module.ts
+│   │   │   └── schemas/         # MongoDB schemas
+│   │   │       └── user.schema.ts
+│   │   ├── app.module.ts
 │   │   └── main.ts
+│   ├── logs/                    # Winston log files
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── nest-cli.json
 │   └── .env
-├── frontend/            # React + Vite frontend
+│
+├── frontend/                     # React + Vite frontend
 │   ├── src/
-│   │   ├── components/  # Organized components
-│   │   ├── pages/       # SignUp, SignIn, Dashboard
-│   │   ├── contexts/    # Auth context
-│   │   └── services/    # API service
+│   │   ├── components/
+│   │   │   ├── layouts/         # Layout components
+│   │   │   │   ├── AppLayout.tsx     # Main layout wrapper
+│   │   │   │   ├── Header.tsx        # Navigation header
+│   │   │   │   ├── Footer.tsx        # Footer with social links
+│   │   │   │   └── index.ts          # Barrel exports
+│   │   │   ├── ui/              # Reusable UI components
+│   │   │   │   ├── Button.tsx        # Multi-variant button
+│   │   │   │   ├── Input.tsx         # Styled input field
+│   │   │   │   ├── Modal.tsx         # Modal dialog
+│   │   │   │   ├── PasswordInput.tsx # Password with toggle
+│   │   │   │   ├── PasswordStrengthIndicator.tsx
+│   │   │   │   └── index.ts          # Barrel exports
+│   │   │   ├── signup/          # Signup components
+│   │   │   │   ├── SignUpForm.tsx    # Form UI
+│   │   │   │   ├── SignUpHero.tsx    # Hero section
+│   │   │   │   ├── TermsModal.tsx    # Terms & conditions
+│   │   │   │   └── index.ts          # Barrel exports
+│   │   │   ├── signin/          # Signin components
+│   │   │   │   ├── SignInForm.tsx    # Login form UI
+│   │   │   │   ├── SignInHero.tsx    # Welcome section
+│   │   │   │   └── index.ts          # Barrel exports
+│   │   │   ├── dashboard/       # Dashboard components
+│   │   │   ├── ProtectedRoute.tsx    # Auth route wrapper
+│   │   │   └── RootRedirect.tsx      # Root path handler
+│   │   ├── pages/               # Page containers
+│   │   │   ├── SignUpPage.tsx        # Signup page with logic
+│   │   │   ├── SignInPage.tsx        # Signin page with auth
+│   │   │   └── DashboardPage.tsx     # Dashboard with stats
+│   │   ├── contexts/            # React contexts
+│   │   │   └── AuthContext.tsx       # Authentication state
+│   │   ├── services/            # API services
+│   │   │   └── api.ts                # Axios HTTP client
+│   │   ├── types/               # TypeScript types
+│   │   │   └── index.ts              # Type definitions
+│   │   ├── utils/               # Utility functions
+│   │   │   └── validation.ts         # Form validators
+│   │   ├── App.tsx              # Root component
+│   │   ├── main.tsx             # Entry point
+│   │   └── index.css            # Global styles
+│   ├── public/                  # Static assets
+│   ├── package.json
+│   ├── vite.config.ts
+│   ├── tailwind.config.js
+│   ├── tsconfig.json
 │   └── .env
-└── docker-compose.yml   # Docker setup
+│
+├── docker-compose.yml           # Docker orchestration
+├── README.md                    # This file
+├── ARCHITECTURE.md              # Architecture documentation
+├── QUICKSTART.md                # Quick start guide
+└── DOCKER.md                    # Docker setup guide
 ```
 
 ## API Endpoints
