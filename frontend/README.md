@@ -20,6 +20,19 @@ Modern React application built with Vite, TypeScript, and Tailwind CSS for the c
 - ✅ TypeScript for complete type safety
 - ✅ Organized component architecture
 
+
+## ✨ App Screens
+<img width="1919" height="2595" alt="Image" src="https://github.com/user-attachments/assets/accd79d3-21bd-4369-95aa-4ed91eeb5039" />
+<img width="1919" height="1490" alt="Image" src="https://github.com/user-attachments/assets/4ddc3eeb-9d47-4166-bb9d-18f522707b0c" />
+<img width="1919" height="1215" alt="Image" src="https://github.com/user-attachments/assets/82179a50-18dc-47eb-b5d6-a358296d27b7" />
+
+### Password Strength Indicator
+
+<img width="1919" height="1602" alt="Image" src="https://github.com/user-attachments/assets/01d8d9ce-4df1-43ef-a9a6-f034583710ef" />
+<img width="1919" height="1580" alt="Image" src="https://github.com/user-attachments/assets/f03d9050-f5ad-4c03-8738-287bd762d6da" />
+<img width="1919" height="1580" alt="Image" src="https://github.com/user-attachments/assets/fbb05687-0247-467d-829b-531c9fe8f14e" />
+
+
 ## 🛠️ Tech Stack
 
 - **React 18.2** - UI library
@@ -394,6 +407,4 @@ Primary colors (blue theme):
 - ✅ Clean code structure
 - ✅ Reusable components
 
-## 📄 License
 
-MIT
