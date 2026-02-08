@@ -6,19 +6,19 @@
 
 ---
 
-## \ud83d\ude80 Quick Overview
+## Quick Overview
 
 This platform provides a complete authentication system with an interactive dashboard for course management. Features include JWT authentication, password strength validation, responsive design, data visualization with charts, and comprehensive security measures.
 
 **Key Highlights:**
 
-- \ud83d\udd12 Secure JWT authentication with bcrypt
-- \ud83d\udcca Interactive dashboard with Recharts
-- \ud83c\udfa8 Modern split-screen UI with Tailwind CSS
-- \ud83d\udce6 MongoDB database with Mongoose ODM
-- \ud83d\udcdd Swagger/OpenAPI documentation
-- \ud83d\udc33 Docker support for easy deployment
-- \u2705 TypeScript throughout for type safety
+- Secure JWT authentication with bcrypt
+- Interactive dashboard with Recharts
+- Modern split-screen UI with Tailwind CSS
+- MongoDB database with Mongoose ODM
+- Swagger/OpenAPI documentation
+- Docker support for easy deployment
+- TypeScript throughout for type safety
 
 ## Features
 
