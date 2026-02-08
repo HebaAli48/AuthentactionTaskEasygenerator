@@ -6,8 +6,8 @@
 
 ## ✨ App Screens
 
-<img width="1919" height="1490" alt="Image" src="https://github.com/user-attachments/assets/4ddc3eeb-9d47-4166-bb9d-18f522707b0c" />
-<img width="1919" height="1215" alt="Image" src="https://github.com/user-attachments/assets/82179a50-18dc-47eb-b5d6-a358296d27b7" />
+<img width="1920" height="1106" alt="Image" src="https://github.com/user-attachments/assets/17d56cc7-bd7e-49cb-af31-7d62c49a8ff2" />
+<img width="1920" height="1355" alt="Image" src="https://github.com/user-attachments/assets/76652758-0fc4-4d7a-b5ea-c43ef27b125a" />
 <img width="1919" height="2595" alt="Image" src="https://github.com/user-attachments/assets/accd79d3-21bd-4369-95aa-4ed91eeb5039" />
 
 ### Password Strength Indicator
