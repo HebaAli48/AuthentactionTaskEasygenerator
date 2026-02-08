@@ -13,7 +13,7 @@ export const SignInHero: React.FC = () => {
 
       <div className="relative z-10 flex flex-col justify-between p-12 text-white w-full">
         <div className="flex-1 flex flex-col justify-center items-center text-center">
-          <div className="mb-8">
+          <div className="mb-8 flex flex-col justify-center items-center">
             <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-2xl mb-6">
               <Rocket className="w-16 h-16 text-blue-600" />
             </div>
