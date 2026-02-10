@@ -176,6 +176,7 @@ easyGenrator/
 │   │   ├── components/
 │   │   │   ├── layouts/         # Layout components
 │   │   │   │   ├── AppLayout.tsx     # Main layout wrapper
+│   │   │   │   ├── AuthLayout.tsx    # sign in and sign up layout wrapper
 │   │   │   │   ├── Header.tsx        # Navigation header
 │   │   │   │   ├── Footer.tsx        # Footer with social links
 │   │   │   │   └── index.ts          # Barrel exports
