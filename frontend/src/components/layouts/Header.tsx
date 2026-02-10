@@ -279,7 +279,7 @@ export const Header: React.FC = () => {
               <>
                 <Link 
                   to="/signin" 
-                  className="text-sm text-gray-600 hover:text-gray-900 font-medium transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 border border-slate-50 hover:bg-slate-50  rounded-lg text-sm font-medium transition-colors"
                 >
                   Sign In
                 </Link>

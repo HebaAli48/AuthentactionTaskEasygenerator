@@ -20,7 +20,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         const storedToken = localStorage.getItem('token') || sessionStorage.getItem('token');
         const storedUser = localStorage.getItem('user') || sessionStorage.getItem('user');
 
-        console.log('🔍 Checking stored auth:', { 
+        console.log('Checking stored auth:', { 
           hasToken: !!storedToken, 
           hasUser: !!storedUser,
           tokenSource: localStorage.getItem('token') ? 'localStorage' : sessionStorage.getItem('token') ? 'sessionStorage' : 'none'
@@ -30,12 +30,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
           const parsedUser = JSON.parse(storedUser);
           setUser(parsedUser);
           setToken(storedToken);
-          console.log('✅ Auth restored from storage');
+          console.log(' Auth restored from storage');
         } else {
-          console.log('⚠️ No stored auth found');
+          console.log(' No stored auth found');
         }
       } catch (error) {
-        console.error('❌ Error initializing auth:', error);
+        console.error(' Error initializing auth:', error);
       } finally {
         // Use setTimeout to ensure state updates have processed
         setTimeout(() => setLoading(false), 0);
@@ -58,17 +58,17 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   };
 
   const signIn = async (data: SignInData, rememberMe: boolean = false) => {
+    console.log("🚀 ~ signIn ~ rememberMe:", rememberMe)
     try {
-      console.log('🔐 Signing in with rememberMe:', rememberMe);
       const response = await authService.signIn(data);
       setUser(response.user);
       setToken(response.access_token);
-      
+      console.log("🚀 ~ signIn ~ response:", response)
       // Store in localStorage if remember me is checked, otherwise sessionStorage
       const storage = rememberMe ? localStorage : sessionStorage;
       storage.setItem('token', response.access_token);
       storage.setItem('user', JSON.stringify(response.user));
-      console.log('💾 Token stored in:', rememberMe ? 'localStorage' : 'sessionStorage');
+      console.log(' Token stored in:', rememberMe ? 'localStorage' : 'sessionStorage');
       
       // Clear the other storage to avoid conflicts
       const otherStorage = rememberMe ? sessionStorage : localStorage;

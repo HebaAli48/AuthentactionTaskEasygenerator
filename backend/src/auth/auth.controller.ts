@@ -28,13 +28,5 @@ export class AuthController {
     return this.authService.signIn(signInDto);
   }
 
-  @Post('logout')
-  @HttpCode(HttpStatus.OK)
-  @ApiOperation({ summary: 'Logout user' })
-  @ApiResponse({ status: 200, description: 'User successfully logged out' })
-  async logout() {
-    // In a stateless JWT setup, logout is handled on the client side
-    // by removing the token. This endpoint is provided for consistency.
-    return { message: 'Logged out successfully' };
-  }
+
 }

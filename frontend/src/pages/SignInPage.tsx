@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { validateSignIn } from '../utils/validation';
 import type { SignInData, ValidationErrors } from '../types';
 import toast from 'react-hot-toast';
-import { SignInForm, SignInHero } from '../components/signin';
+import { AuthLayout } from '../components/layouts/AuthLayout';
+import { SignInForm } from '@/components/signin/SignInForm';
 
 export const SignInPage: React.FC = () => {
   const navigate = useNavigate();
@@ -47,37 +48,23 @@ export const SignInPage: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 flex">
-      <SignInHero />
-
-      {/* Right Side - White Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-gray-50">
-        <div className="w-full max-w-md">
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Sign in to your account</h2>
-
-            <SignInForm
-              formData={formData}
-              errors={errors}
-              isLoading={isLoading}
-              rememberMe={rememberMe}
-              handleChange={handleChange}
-              setRememberMe={setRememberMe}
-              handleSubmit={handleSubmit}
-            />
-
-            {/* Sign Up Link */}
-            <div className="mt-6 text-center">
-              <p className="text-sm text-gray-600">
-                Don't have an account?{' '}
-                <Link to="/signup" className="text-blue-600 hover:text-blue-700 font-semibold">
-                  Sign up
-                </Link>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <AuthLayout
+      heroTitle="Welcome Back"
+      heroDescription="Sign in to access your account and continue your learning journey. Stay connected with our community and unlock all premium features!"
+      formTitle="Sign in to your account"
+      footerText="Don't have an account?"
+      footerLinkText="Sign up"
+      footerLinkTo="/signup"
+    >
+      <SignInForm
+        formData={formData}
+        errors={errors}
+        isLoading={isLoading}
+        rememberMe={rememberMe}
+        handleChange={handleChange}
+        setRememberMe={setRememberMe}
+        handleSubmit={handleSubmit}
+      />
+    </AuthLayout>
   );
 };
