@@ -271,12 +271,15 @@ NestJS 10.3.0
 ## Updated Frontend Components
 
 ### AuthLayout
+
 The `AuthLayout` is a reusable layout component used for authentication pages like Sign In and Sign Up. It provides a consistent structure with:
+
 - **Hero Section**: Displays a title and description.
 - **Form Section**: Contains the authentication form.
 - **Footer Link**: Provides navigation between Sign In and Sign Up pages.
 
 Props:
+
 - `heroTitle`: Title for the hero section.
 - `heroDescription`: Description text for the hero section.
 - `formTitle`: Title for the form section.
@@ -284,7 +287,9 @@ Props:
 - `children`: The form component (e.g., `SignInForm`, `SignUpForm`).
 
 ### SignInPage
+
 The `SignInPage` uses the `AuthLayout` to render the sign-in form. It passes the following props to `AuthLayout`:
+
 - `heroTitle`: "Welcome Back"
 - `heroDescription`: "Sign in to access your account and continue your learning journey."
 - `formTitle`: "Sign in to your account"
@@ -293,7 +298,9 @@ The `SignInPage` uses the `AuthLayout` to render the sign-in form. It passes the
 - `footerLinkTo`: "/signup"
 
 ### SignUpPage
+
 The `SignUpPage` uses the `AuthLayout` to render the sign-up form. It passes the following props to `AuthLayout`:
+
 - `heroTitle`: "EasyGenerator"
 - `heroDescription`: "Create your account to unlock premium features and stay updated with the latest news."
 - `formTitle`: "Create your account"
