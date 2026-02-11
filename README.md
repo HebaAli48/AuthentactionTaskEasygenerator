@@ -31,7 +31,6 @@ This platform provides a complete authentication system with an interactive dash
 - TypeScript throughout for type safety
 - **CI/CD Pipeline** with GitHub Actions (3 workflows)
 - **Winston Logging** (console + file transports)
-- **Comprehensive Testing** (Unit + E2E + Coverage)
 - **Advanced Error Handling** with global filters
 
 ## Features
@@ -63,7 +62,6 @@ This platform provides a complete authentication system with an interactive dash
 - Helmet security headers
 - CORS protection
 - CI/CD with GitHub Actions
-- Jest testing framework
 - Global error handling
 - Automated security audits
 
@@ -158,9 +156,6 @@ easyGenrator/
 │   │   │   └── strategies/      # Passport strategies
 │   │   │       └── jwt.strategy.ts
 │   │   ├── users/               # User management module
-│   │   │   ├── users.controller.ts
-│   │   │   ├── users.service.ts
-│   │   │   ├── users.module.ts
 │   │   │   └── schemas/         # MongoDB schemas
 │   │   │       └── user.schema.ts
 │   │   ├── app.module.ts
@@ -234,10 +229,6 @@ easyGenrator/
 
 - `POST /auth/signup` - Register user (email, name, password)
 - `POST /auth/signin` - Login (email, password)
-
-### Protected (requires JWT)
-
-- `GET /users/profile` - Get current user profile
 
 ## Validation Rules
 
@@ -344,32 +335,7 @@ Multi-layered error handling strategy:
 - Error codes and status codes mapping
 - Automatic retry mechanisms for network errors
 
-### 🧪 3. Testing Infrastructure
-
-Comprehensive testing setup:
-
-**Backend Testing:**
-
-- **Unit Tests**: Jest-based unit testing for services and controllers
-- **E2E Tests**: End-to-end API testing with supertest
-- **Test Coverage**: Code coverage reports with jest
-- **Test Configuration**: `jest-e2e.json` for E2E specific settings
-- **Mocked Services**: MongoDB memory server for isolated testing
-- **Test Scripts**:
-  ```bash
-  npm run test          # Unit tests
-  npm run test:e2e      # E2E tests
-  npm run test:cov      # Coverage report
-  npm run test:watch    # Watch mode
-  ```
-
-**Frontend Testing Setup:**
-
-- ESLint for code quality
-- TypeScript strict type checking
-- Build validation in CI/CD
-
-### 🚀 4. CI/CD Pipeline (GitHub Actions)
+### 🚀 3. CI/CD Pipeline (GitHub Actions)
 
 Production-ready CI/CD with 3 comprehensive workflows:
 
@@ -377,16 +343,15 @@ Production-ready CI/CD with 3 comprehensive workflows:
 
 Runs on every push and pull request:
 
-**Backend Testing:**
+**Backend:**
 
 - Multi-version Node.js testing (18.x, 20.x)
-- MongoDB service container for integration tests
+- MongoDB service container
 - Automated linting with ESLint
-- Unit and coverage tests
 - Production build validation
 - Dependencies caching for faster builds
 
-**Frontend Testing:**
+**Frontend:**
 
 - Multi-version Node.js testing (18.x, 20.x)
 - ESLint code quality checks
@@ -423,7 +388,6 @@ Runs on main branch pushes and version tags:
 
 **CI/CD Features:**
 
-- ✅ Automated testing on every commit
 - ✅ Multi-Node version compatibility testing
 - ✅ Parallel job execution for faster pipelines
 - ✅ Dependency caching (30-50% faster builds)
@@ -432,7 +396,7 @@ Runs on main branch pushes and version tags:
 - ✅ Branch protection enforcement
 - ✅ Fail-fast strategy with continue-on-error for non-critical steps
 
-### 📚 5. API Documentation (Swagger/OpenAPI)
+### 📚 4. API Documentation (Swagger/OpenAPI)
 
 Interactive API documentation with Swagger:
 
@@ -473,7 +437,6 @@ DocumentBuilder()
 | ------------------ | ---------------------------------------------------- | ----------- |
 | **Logging**        | Winston with file + console transports               | ✅ Complete |
 | **Error Handling** | Global filters + validation + user-friendly messages | ✅ Complete |
-| **Testing**        | Jest unit tests + E2E tests + coverage               | ✅ Complete |
 | **CI/CD**          | GitHub Actions (3 workflows)                         | ✅ Complete |
 | **API Docs**       | Swagger/OpenAPI interactive docs                     | ✅ Complete |
 
@@ -489,17 +452,6 @@ DocumentBuilder()
 - ✅ Responsive design system
 - ✅ Toast notification system
 - ✅ Code splitting and lazy loading
-
-## Testing
-
-**Backend:**
-
-```bash
-cd backend
-npm run test          # Unit tests
-npm run test:e2e      # E2E tests
-npm run test:cov      # Coverage
-```
 
 ## Documentation
 
@@ -569,7 +521,6 @@ docker-compose down
 
 ✅ **Logging** - Winston logger with file rotation and structured logging  
 ✅ **Error Handling** - Global exception filters with user-friendly messages  
-✅ **Testing** - Jest unit tests, E2E tests, and coverage reports  
 ✅ **CI/CD** - GitHub Actions with 3 comprehensive workflows  
 ✅ **API Documentation** - Interactive Swagger/OpenAPI documentation
 

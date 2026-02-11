@@ -365,20 +365,6 @@ interface User {
 
 **Response (200):** Same as signup
 
-### GET `/users/profile`
-
-**Headers:** `Authorization: Bearer <token>`
-
-**Response (200):**
-
-```json
-{
-  "id": "...",
-  "email": "user@example.com",
-  "name": "User Name"
-}
-```
-
 ### Error Responses
 
 **400 Bad Request:**
@@ -540,17 +526,5 @@ Trigger GitHub Actions
 - ✅ HTTPS enabled
 - ✅ Security headers configured
 - ✅ Logs not exposing sensitive data
-
-## Testing
-
-**Backend:**
-
-```bash
-npm run test          # Unit tests
-npm run test:e2e      # End-to-end tests
-npm run test:cov      # Coverage report
-```
-
-**Test Types**: Unit (services, controllers), Integration (DB ops), E2E (complete flows)
 
 ---

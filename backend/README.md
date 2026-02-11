@@ -141,54 +141,6 @@ Content-Type: application/json
 }
 ```
 
-### Protected Endpoints
-
-#### Get User Profile
-
-```http
-GET /users/profile
-Authorization: Bearer <access_token>
-```
-
-**Response:**
-
-```json
-{
-  "_id": "65f1a2b3c4d5e6f7g8h9i0j1",
-  "email": "user@example.com",
-  "name": "Heba Mohammed",
-  "createdAt": "2026-02-07T12:00:00.000Z",
-  "updatedAt": "2026-02-07T12:00:00.000Z"
-}
-```
-
-#### Get Current User
-
-```http
-GET /users/me
-Authorization: Bearer <access_token>
-```
-
-## Testing
-
-### Run unit tests
-
-```bash
-npm run test
-```
-
-### Run e2e tests
-
-```bash
-npm run test:e2e
-```
-
-### Run tests with coverage
-
-```bash
-npm run test:cov
-```
-
 ## Linting and Formatting
 
 ### Lint code
@@ -222,13 +174,8 @@ backend/
 │   ├── users/                    # User management module
 │   │   ├── schemas/              # Mongoose schemas
 │   │   │   └── user.schema.ts    # User model
-│   │   ├── users.controller.ts   # User endpoints
-│   │   ├── users.module.ts       # User module
-│   │   └── users.service.ts      # User business logic
 │   ├── app.module.ts             # Main application module
 │   └── main.ts                   # Application entry point
-├── test/
-│   └── jest-e2e.json             # E2E test config
 ├── logs/                         # Winston log files
 │   ├── error.log                 # Error logs
 │   └── combined.log              # Combined logs

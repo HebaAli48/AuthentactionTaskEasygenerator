@@ -126,12 +126,6 @@ frontend/src/
 - Component library grows organically
 - Type-safe with TypeScript
 
-### 5. **Testing**
-
-- Smaller components are easier to test
-- Can test UI components in isolation
-- Clear component boundaries
-
 ## Usage Examples
 
 ### Page Imports (from components)

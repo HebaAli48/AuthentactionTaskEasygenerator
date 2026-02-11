@@ -75,34 +75,10 @@ npm run dev
 2. Sign in with "Remember me" to stay logged in
 3. Explore the dashboard
 
-## Troubleshooting
-
-**MongoDB connection failed?**
-
-- Check MongoDB is running
-- Verify `MONGODB_URI` in `.env`
-
-**Port already in use?**
-
-```bash
-# Windows
-netstat -ano | findstr :3000
-taskkill /PID <PID> /F
-
-# macOS/Linux
-lsof -ti:3000 | xargs kill -9
-```
-
-**CORS errors?**
-
-- Ensure backend is running
-- Check `CORS_ORIGIN` matches frontend URL
-
 ## Next Steps
 
 - **Documentation**: See [README.md](./README.md) for features
 - **Architecture**: Check [ARCHITECTURE.md](./ARCHITECTURE.md)
-- **Testing**: Run `npm run test` in backend
 - **Build**: Run `npm run build` for production
 
 ---
