@@ -4,7 +4,6 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { WinstonModule } from 'nest-winston';
 import * as winston from 'winston';
 import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -49,7 +48,6 @@ import { UsersModule } from './users/users.module';
 
     // Feature modules
     AuthModule,
-    UsersModule,
   ],
 })
 export class AppModule {}

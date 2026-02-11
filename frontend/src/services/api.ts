@@ -30,19 +30,6 @@ export const authService = {
     return response.data;
   },
 
-  logout: async (): Promise<void> => {
-    await api.post('/auth/logout');
-  },
-
-  getProfile: async () => {
-    const response = await api.get('/users/profile');
-    return response.data;
-  },
-
-  getCurrentUser: async () => {
-    const response = await api.get('/users/me');
-    return response.data;
-  },
 };
 
 export default api;

@@ -87,9 +87,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     localStorage.removeItem('user');
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('user');
-    authService.logout().catch(() => {
-      // Ignore errors during logout
-    });
+
   };
 
   const value: AuthContextType = {
